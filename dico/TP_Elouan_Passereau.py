@@ -106,7 +106,7 @@ if menu=="Difficile":
     menu=3
     val=3
 
-f=open("dico.txt", 'rb')#ouvre le dico en mode "read"
+f=open("big_dico.txt", 'rb')#ouvre le dico en mode "read"
 fe=f.read().decode("utf-8")#decode le dico avec l'UTF-8
 
 #print(savoir(fe,difficulté_low(val), difficulté_high(val)))
