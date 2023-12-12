@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche dans la Base de Données</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Chargement dynamique des tables dans le menu déroulant au chargement de la page
+            $.post("getTables.php", function (data) {
+                $("#tableDropdown").html(data);
+            });
+
+            // Gestion de la sélection de la table
+            $("#tableDropdown").change(function () {
+                var selectedTable = $(this).val();
+                if (selectedTable !== "") {
+                    // Chargement dynamique des colonnes de la table sélectionnée
+                    $.post("getColumns.php", { table: selectedTable }, function (data) {
+                        $("#columnDropdown").html(data);
+                    });
+                }
+            });
+
+            // Soumission du formulaire de recherche
+            $("#searchForm").submit(function (e) {
+                e.preventDefault();
+                var selectedTable = $("#tableDropdown").val();
+                var selectedColumn = $("#columnDropdown").val();
+                var searchTerm = $("#searchTerm").val();
+                if (selectedTable !== "" && selectedColumn !== "" && searchTerm !== "") {
+                    // Effectuer la recherche et afficher les résultats dans la div "results"
+                    $.post("search.php", { table: selectedTable, column: selectedColumn, searchTerm: searchTerm }, function (data) {
+                        $("#results").html(data);
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Recherche dans la Base de Données</h1>
+    <form id="searchForm">
+        <label for="tableDropdown">Table :</label>
+        <select id="tableDropdown" name="table"></select>
+        <br>
+        <label for="columnDropdown">Colonne :</label>
+        <select id="columnDropdown" name="column"></select>
+        <br>
+        <label for="searchTerm">Terme de Recherche :</label>
+        <input type="text" id="searchTerm" name="searchTerm">
+        <br>
+        <input type="submit" value="Rechercher">
+    </form>
+    <div id="results"></div>
+</body>
+</html>

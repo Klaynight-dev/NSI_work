@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fedfc2fb8343ac7ac455482183f55cdf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fedfc2fb8343ac7ac455482183f55cdf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fedfc2fb8343ac7ac455482183f55cdf = L.map(
+                "map_fedfc2fb8343ac7ac455482183f55cdf",
+                {
+                    center: [46.227638, 2.213749],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+
+            
+
+        
+    
+            var tile_layer_9b5a01823eb5ac729a0db26a00d0ca24 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 10, "maxZoom": 10, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var marker_4ff57ee78cff165fc4f0a005ee57f11f = L.marker(
+                [46.2025, 5.221944444],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_e56905d656688b6799de065bfa7c9808 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_4ff57ee78cff165fc4f0a005ee57f11f.setIcon(icon_e56905d656688b6799de065bfa7c9808);
+        
+    
+        var popup_8537f4ca1599ed68cd9413da133eeb04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c799963e44feb3a04d701f777def81b = $(`<div id="html_7c799963e44feb3a04d701f777def81b" style="width: 100.0%; height: 100.0%;">Bourg-en-Bresse Ain (01)</div>`)[0];
+                popup_8537f4ca1599ed68cd9413da133eeb04.setContent(html_7c799963e44feb3a04d701f777def81b);
+            
+        
+
+        marker_4ff57ee78cff165fc4f0a005ee57f11f.bindPopup(popup_8537f4ca1599ed68cd9413da133eeb04)
+        ;
+
+        
+    
+    
+            marker_4ff57ee78cff165fc4f0a005ee57f11f.bindTooltip(
+                `<div>
+                     Bourg-en-Bresse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f80f492757bdefd1057a53b41e2d8c5b = L.marker(
+                [46.56833333, 3.334444444],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_18614e6e0ede7cd12bf514c5aa30a689 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f80f492757bdefd1057a53b41e2d8c5b.setIcon(icon_18614e6e0ede7cd12bf514c5aa30a689);
+        
+    
+        var popup_764eb271f52eace23dbb75fb4614dfbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc76983c19c7c344a36dc4d01211e32c = $(`<div id="html_bc76983c19c7c344a36dc4d01211e32c" style="width: 100.0%; height: 100.0%;">Moulins Allier (03)</div>`)[0];
+                popup_764eb271f52eace23dbb75fb4614dfbf.setContent(html_bc76983c19c7c344a36dc4d01211e32c);
+            
+        
+
+        marker_f80f492757bdefd1057a53b41e2d8c5b.bindPopup(popup_764eb271f52eace23dbb75fb4614dfbf)
+        ;
+
+        
+    
+    
+            marker_f80f492757bdefd1057a53b41e2d8c5b.bindTooltip(
+                `<div>
+                     Moulins
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f9f2108538b062b8cee0cccdf602262 = L.marker(
+                [44.73527778, 4.599444444],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_52bfb71031ce66936fe79da399c64161 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f9f2108538b062b8cee0cccdf602262.setIcon(icon_52bfb71031ce66936fe79da399c64161);
+        
+    
+        var popup_369921d8d1dcb852e8b92b3f60629bbb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1ce64bea0aab509cdd7e6846ad23b02 = $(`<div id="html_c1ce64bea0aab509cdd7e6846ad23b02" style="width: 100.0%; height: 100.0%;">Privas Ardèche (07)</div>`)[0];
+                popup_369921d8d1dcb852e8b92b3f60629bbb.setContent(html_c1ce64bea0aab509cdd7e6846ad23b02);
+            
+        
+
+        marker_8f9f2108538b062b8cee0cccdf602262.bindPopup(popup_369921d8d1dcb852e8b92b3f60629bbb)
+        ;
+
+        
+    
+    
+            marker_8f9f2108538b062b8cee0cccdf602262.bindTooltip(
+                `<div>
+                     Privas
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_caab23dc375fcae150a737fc6dbf757b = L.marker(
+                [44.92916667, 2.446944444],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_7dc583e93cec57a109754661e5ef028d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_caab23dc375fcae150a737fc6dbf757b.setIcon(icon_7dc583e93cec57a109754661e5ef028d);
+        
+    
+        var popup_00a623074d1c8b33e322d15e95b49ca8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b85bd514f20cc5790e7748575063c65 = $(`<div id="html_6b85bd514f20cc5790e7748575063c65" style="width: 100.0%; height: 100.0%;">Aurillac Cantal (15)</div>`)[0];
+                popup_00a623074d1c8b33e322d15e95b49ca8.setContent(html_6b85bd514f20cc5790e7748575063c65);
+            
+        
+
+        marker_caab23dc375fcae150a737fc6dbf757b.bindPopup(popup_00a623074d1c8b33e322d15e95b49ca8)
+        ;
+
+        
+    
+    
+            marker_caab23dc375fcae150a737fc6dbf757b.bindTooltip(
+                `<div>
+                     Aurillac
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11311165809aea4c779ae728a2ad7d46 = L.marker(
+                [44.93555556, 4.893611111],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_1070042202bdb20cadef3dc5f9947fe9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_11311165809aea4c779ae728a2ad7d46.setIcon(icon_1070042202bdb20cadef3dc5f9947fe9);
+        
+    
+        var popup_a697f41822a6adda43eeff46e2e1c592 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_611637c8e5361168e18d63352326df4d = $(`<div id="html_611637c8e5361168e18d63352326df4d" style="width: 100.0%; height: 100.0%;">Valence Drôme (26)</div>`)[0];
+                popup_a697f41822a6adda43eeff46e2e1c592.setContent(html_611637c8e5361168e18d63352326df4d);
+            
+        
+
+        marker_11311165809aea4c779ae728a2ad7d46.bindPopup(popup_a697f41822a6adda43eeff46e2e1c592)
+        ;
+
+        
+    
+    
+            marker_11311165809aea4c779ae728a2ad7d46.bindTooltip(
+                `<div>
+                     Valence
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e6e7890540d86dc906f7a7c8594b09b = L.marker(
+                [45.18833333, 5.7325],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_8396bb80318282b532f6d091b8459a35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5e6e7890540d86dc906f7a7c8594b09b.setIcon(icon_8396bb80318282b532f6d091b8459a35);
+        
+    
+        var popup_4f61baecec991343c54490b9b2731f82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b04ae52b32c864de024c7c640ace0c60 = $(`<div id="html_b04ae52b32c864de024c7c640ace0c60" style="width: 100.0%; height: 100.0%;">Grenoble Isère (38)</div>`)[0];
+                popup_4f61baecec991343c54490b9b2731f82.setContent(html_b04ae52b32c864de024c7c640ace0c60);
+            
+        
+
+        marker_5e6e7890540d86dc906f7a7c8594b09b.bindPopup(popup_4f61baecec991343c54490b9b2731f82)
+        ;
+
+        
+    
+    
+            marker_5e6e7890540d86dc906f7a7c8594b09b.bindTooltip(
+                `<div>
+                     Grenoble
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cf4403fae539a80769e635fb7cd0f4a2 = L.marker(
+                [45.4425, 4.386388889],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_1417aecc4a78561eabd8b75cc8df58dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cf4403fae539a80769e635fb7cd0f4a2.setIcon(icon_1417aecc4a78561eabd8b75cc8df58dc);
+        
+    
+        var popup_76988b44786f211f0234963ca351f996 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_86068de2f5c4d8710c50f19cf8cc96cf = $(`<div id="html_86068de2f5c4d8710c50f19cf8cc96cf" style="width: 100.0%; height: 100.0%;">Saint-Étienne Loire (42)</div>`)[0];
+                popup_76988b44786f211f0234963ca351f996.setContent(html_86068de2f5c4d8710c50f19cf8cc96cf);
+            
+        
+
+        marker_cf4403fae539a80769e635fb7cd0f4a2.bindPopup(popup_76988b44786f211f0234963ca351f996)
+        ;
+
+        
+    
+    
+            marker_cf4403fae539a80769e635fb7cd0f4a2.bindTooltip(
+                `<div>
+                     Saint-Étienne
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea40f9457c665fe42b7bc41b6350584f = L.marker(
+                [45.04111111, 3.883888889],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_84b6a270504b0f4e13873d896f918d82 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ea40f9457c665fe42b7bc41b6350584f.setIcon(icon_84b6a270504b0f4e13873d896f918d82);
+        
+    
+        var popup_b094f3cbd66dc9ef4f1c9b29ea79d0dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd480ad5a8d31ddcee7e5f3b78eb5ca1 = $(`<div id="html_cd480ad5a8d31ddcee7e5f3b78eb5ca1" style="width: 100.0%; height: 100.0%;">Le Puy-en-Velay Haute-Loire (43)</div>`)[0];
+                popup_b094f3cbd66dc9ef4f1c9b29ea79d0dc.setContent(html_cd480ad5a8d31ddcee7e5f3b78eb5ca1);
+            
+        
+
+        marker_ea40f9457c665fe42b7bc41b6350584f.bindPopup(popup_b094f3cbd66dc9ef4f1c9b29ea79d0dc)
+        ;
+
+        
+    
+    
+            marker_ea40f9457c665fe42b7bc41b6350584f.bindTooltip(
+                `<div>
+                     Le Puy-en-Velay
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9bc4babd62d4794af19b8e8654118ca2 = L.marker(
+                [45.77722222, 3.084166667],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_f12af963a281517690fde90866ed173a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9bc4babd62d4794af19b8e8654118ca2.setIcon(icon_f12af963a281517690fde90866ed173a);
+        
+    
+        var popup_029c4dcb0842e90ccf8844e73cb8bc3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f5e47fff3107552a4ef9bbeba85bae9 = $(`<div id="html_3f5e47fff3107552a4ef9bbeba85bae9" style="width: 100.0%; height: 100.0%;">Clermont-Ferrand Puy-de-Dôme (63)</div>`)[0];
+                popup_029c4dcb0842e90ccf8844e73cb8bc3f.setContent(html_3f5e47fff3107552a4ef9bbeba85bae9);
+            
+        
+
+        marker_9bc4babd62d4794af19b8e8654118ca2.bindPopup(popup_029c4dcb0842e90ccf8844e73cb8bc3f)
+        ;
+
+        
+    
+    
+            marker_9bc4babd62d4794af19b8e8654118ca2.bindTooltip(
+                `<div>
+                     Clermont-Ferrand
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de7c90b743e65e5a0e0bebd089348212 = L.marker(
+                [45.76083333, 4.843333333],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_f61c4258ed7213d4a81b9fb851f6261c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_de7c90b743e65e5a0e0bebd089348212.setIcon(icon_f61c4258ed7213d4a81b9fb851f6261c);
+        
+    
+        var popup_f6b08b9234710957106e5fd583883d45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18f91355d6800c5bdbf538d939ab6e2e = $(`<div id="html_18f91355d6800c5bdbf538d939ab6e2e" style="width: 100.0%; height: 100.0%;">Lyon Rhône (69)</div>`)[0];
+                popup_f6b08b9234710957106e5fd583883d45.setContent(html_18f91355d6800c5bdbf538d939ab6e2e);
+            
+        
+
+        marker_de7c90b743e65e5a0e0bebd089348212.bindPopup(popup_f6b08b9234710957106e5fd583883d45)
+        ;
+
+        
+    
+    
+            marker_de7c90b743e65e5a0e0bebd089348212.bindTooltip(
+                `<div>
+                     Lyon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90dc37491ecfe8351a506d453d80d420 = L.marker(
+                [45.56416667, 5.918055556],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_cf31b1972d52d00ac3e3430412578237 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90dc37491ecfe8351a506d453d80d420.setIcon(icon_cf31b1972d52d00ac3e3430412578237);
+        
+    
+        var popup_270f3f1214ba3f1c31191edb419dc097 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_983962b2172e35789111442d40c1c5a9 = $(`<div id="html_983962b2172e35789111442d40c1c5a9" style="width: 100.0%; height: 100.0%;">Chambéry Savoie (73)</div>`)[0];
+                popup_270f3f1214ba3f1c31191edb419dc097.setContent(html_983962b2172e35789111442d40c1c5a9);
+            
+        
+
+        marker_90dc37491ecfe8351a506d453d80d420.bindPopup(popup_270f3f1214ba3f1c31191edb419dc097)
+        ;
+
+        
+    
+    
+            marker_90dc37491ecfe8351a506d453d80d420.bindTooltip(
+                `<div>
+                     Chambéry
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_abba66af0e511778390e6e9ab8972d83 = L.marker(
+                [45.9025, 6.129722222],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_fedfc2fb8343ac7ac455482183f55cdf);
+        
+    
+            var icon_748ff1c1884dbd9c063838998a3fe66d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_abba66af0e511778390e6e9ab8972d83.setIcon(icon_748ff1c1884dbd9c063838998a3fe66d);
+        
+    
+        var popup_6832d73be1d9559828ea8e45cf823e6f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc75302234604c55e9dd5a2e20035f86 = $(`<div id="html_dc75302234604c55e9dd5a2e20035f86" style="width: 100.0%; height: 100.0%;">Annecy Haute-Savoie (74)</div>`)[0];
+                popup_6832d73be1d9559828ea8e45cf823e6f.setContent(html_dc75302234604c55e9dd5a2e20035f86);
+            
+        
+
+        marker_abba66af0e511778390e6e9ab8972d83.bindPopup(popup_6832d73be1d9559828ea8e45cf823e6f)
+        ;
+
+        
+    
+    
+            marker_abba66af0e511778390e6e9ab8972d83.bindTooltip(
+                `<div>
+                     Annecy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

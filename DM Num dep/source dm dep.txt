@@ -1,0 +1,10 @@
+import csv
+import numpy as np
+
+with open('coordonnées préfectures.csv', 'r') as f:
+    données= list(csv.reader(f, delimiter=";"))
+    données = np.array(données)for i in range(len(données)):
+    if data['code']==données[i][0]:
+        print(données[i][3])
+        print(données[i][4])
+        print(données[i][5])

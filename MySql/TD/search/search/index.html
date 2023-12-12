@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche dans la Base de Données</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Chargement dynamique des bases de données dans le menu déroulant au chargement de la page
+            $.post("getDatabases.php", function (data) {
+                $("#databaseDropdown").html(data);
+            });
+
+            // Gestion de la sélection de la base de données
+            $("#databaseDropdown").change(function () {
+                var selectedDatabase = $(this).val();
+                if (selectedDatabase !== "") {
+                    // Chargement dynamique des tables de la base de données sélectionnée
+                    $.post("getTables.php", { database: selectedDatabase }, function (data) {
+                        $("#tableDropdown").html(data);
+                    });
+                }
+            });
+
+            // Gestion de la sélection de la table
+            $("#tableDropdown").change(function () {
+                var selectedTable = $(this).val();
+                if (selectedTable !== "") {
+                    // Chargement dynamique des colonnes de la table sélectionnée
+                    $.post("getColumns.php", { table: selectedTable }, function (data) {
+                        $("#columnDropdown").html(data);
+                    });
+                }
+            });
+
+            // Soumission du formulaire de recherche
+            $("#searchForm").submit(function (e) {
+                e.preventDefault();
+                var selectedDatabase = $("#databaseDropdown").val();
+                var selectedTable = $("#tableDropdown").val();
+                var columns = [];
+                // Obtenez les colonnes sélectionnées
+                $("#columnDropdown option:selected").each(function () {
+                    columns.push($(this).val());
+                });
+                var conditions = [];
+                // Obtenez les conditions personnalisées pour chaque colonne
+                $("#conditionDropdown option:selected").each(function () {
+                    var column = $(this).data("column");
+                    var condition = $(this).val();
+                    if (condition !== "") {
+                        conditions.push(column + "='" + condition + "'");
+                    }
+                });
+                var searchTerm = $("#searchTerm").val();
+                if (selectedDatabase !== "" && selectedTable !== "") {
+                    // Créez la clause WHERE en fonction des colonnes et des conditions
+                    var whereClause = "";
+                    if (conditions.length > 0) {
+                        whereClause = "WHERE " + conditions.join(" AND ");
+                    }
+                    // Effectuez la recherche et affichez les résultats dans la div "results"
+                    $.post("search.php", { database: selectedDatabase, table: selectedTable, columns: columns, where: whereClause, searchTerm: searchTerm }, function (data) {
+                        $("#results").html(data);
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Recherche dans la Base de Données</h1>
+    <form id="searchForm">
+        <label for="databaseDropdown">Base de Données :</label>
+        <select id="databaseDropdown" name="database"></select>
+        <br>
+        <label for="tableDropdown">Table :</label>
+        <select id="tableDropdown" name="table"></select>
+        <br>
+        <label for="columnDropdown">Colonnes :</label>
+        <select id="columnDropdown" name="columns[]" multiple></select>
+        <br>
+        <label for="conditionDropdown">Conditions :</label>
+        <select id="conditionDropdown" name="conditions[]" multiple></select>
+        <br>
+        <label for="searchTerm">Terme de Recherche :</label>
+        <input type="text" id="searchTerm" name="searchTerm">
+        <br>
+        <input type="submit" value="Rechercher">
+    </form>
+    <div id="results"></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Binaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversion Binaire</h1>
+    <form>
+        <label for="nombre">Entrez un nombre :</label>
+        <input type="number" id="nombre" required>
+        <button type="button" id="convertButton">Convertir</button>
+    </form>
+    <h2>Résultat :</h2>
+    <ul id="resultList"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const convertButton = document.getElementById("convertButton");
+            const nombreInput = document.getElementById("nombre");
+            const resultList = document.getElementById("resultList");
+
+            convertButton.addEventListener("click", function() {
+                resultList.innerHTML = "";
+
+                const nombre = parseInt(nombreInput.value);
+
+                if (!isNaN(nombre)) {
+                    for (let i = 0; i <= nombre; i++) {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = codeB(i);
+                        resultList.appendChild(listItem);
+                    }
+                } else {
+                    alert("Veuillez entrer un nombre valide.");
+                }
+            });
+
+            function codeB(n) {
+                if (n === 0) {
+                    return "0";
+                } else if (n === 1) {
+                    return "1";
+                } else {
+                    return codeB(Math.floor(n / 2)) + (n % 2).toString();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

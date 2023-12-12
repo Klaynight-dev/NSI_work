@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Web avec Python</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Page Web avec Python</h1>
+
+    <form method="POST">
+        <label for="code_departement">Code du département :</label>
+        <input type="text" id="code_departement" name="code_departement" required>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <div id="python-output">
+        {{ python_output | safe }}
+    </div>
+
+    <!-- Incluez ici le code JavaScript pour interagir avec la page -->
+    <script src="script.js"></script>
+</body>
+</html>

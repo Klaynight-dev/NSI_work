@@ -1,0 +1,9 @@
+Exemple input 3,[nom BD],[Nom table] :
+-> id INT AUTO_INCREMENT PRIMARY KEY, nom VARCHAR(255), prenom VARCHAR(255), age INT
+
+Nom de test :
+Base de donné : tbl_1
+Table 	      : Test1
+
+-> Faire un google doc pour expliquer comment cela fonctionne
+-> Donner les instructions 

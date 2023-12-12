@@ -1,0 +1,17 @@
+============================================================
+
+		By Elouan Passereau
+
+   Programme créé exclusivement à des fins éducatives
+	
+
+		Copyright by Elouan © 2023
+
+
+============================================================
+
+Comment éxécuter le programme ? :
+	-> Lancer le fichier [Coté pendu.py]
+	-> Cliquer dans le volet "Execute"
+	-> Cliquer sur "Executer le programme courant dans un terminal"
+	-> Et bon jeu ^^

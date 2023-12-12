@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application MySQL</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Application MySQL</h1>
+    <div>
+        <button onclick="createDatabase()">Créer une Base de données</button>
+        <button onclick="deleteDatabase()">Supprimer une Base de données</button>
+        <button onclick="createTable()">Créer une Table</button>
+        <button onclick="deleteTable()">Supprimer une Table</button>
+        <button onclick="insertData()">Insérer des données</button>
+        <button onclick="queryData()">Rechercher des données</button>
+    </div>
+    
+    <div id="output"></div>
+    
+    <script>
+        function createDatabase() {
+            // Code JavaScript pour créer une base de données
+            $.ajax({
+                type: 'POST',
+                url: 'api.php', // Remplacez 'api.php' par l'URL de votre API serveur
+                data: {
+                    action: 'createDatabase'
+                },
+                success: function (response) {
+                    $('#output').html(response);
+                }
+            });
+        }
+
+        // Implémentez les autres fonctions JavaScript pour les autres actions de base de données de la même manière
+
+        function insertData() {
+            // Code JavaScript pour insérer des données dans la table
+            $.ajax({
+                type: 'POST',
+                url: 'api.php', // Remplacez 'api.php' par l'URL de votre API serveur
+                data: {
+                    action: 'insertData'
+                },
+                success: function (response) {
+                    $('#output').html(response);
+                }
+            });
+        }
+
+        function queryData() {
+            // Code JavaScript pour rechercher des données dans la table
+            $.ajax({
+                type: 'POST',
+                url: 'api.php', // Remplacez 'api.php' par l'URL de votre API serveur
+                data: {
+                    action: 'queryData'
+                },
+                success: function (response) {
+                    $('#output').html(response);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

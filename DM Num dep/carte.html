@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3cc7a0a54d63122d6313681c6275cd75 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3cc7a0a54d63122d6313681c6275cd75" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3cc7a0a54d63122d6313681c6275cd75 = L.map(
+                "map_3cc7a0a54d63122d6313681c6275cd75",
+                {
+                    center: [46.227638, 2.213749],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ae8dc773df10516c04eaae3120611390 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3cc7a0a54d63122d6313681c6275cd75);
+        
+    
+            var marker_a1f02fce67b068679d66027dfc67d34a = L.marker(
+                [48.51444444, -2.765833333],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_3cc7a0a54d63122d6313681c6275cd75);
+        
+    
+            var icon_2918d7be2faaa7507ec64605b6760afd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_a1f02fce67b068679d66027dfc67d34a.setIcon(icon_2918d7be2faaa7507ec64605b6760afd);
+        
+    
+        var popup_af55f2d086062ec30dd0a0cd4d3ea98f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_249ba1713d3f3b2f997710ea7df15cf2 = $(`<div id="html_249ba1713d3f3b2f997710ea7df15cf2" style="width: 100.0%; height: 100.0%;">Saint-Brieuc Côtes-d'Armor (22)</div>`)[0];
+                popup_af55f2d086062ec30dd0a0cd4d3ea98f.setContent(html_249ba1713d3f3b2f997710ea7df15cf2);
+            
+        
+
+        marker_a1f02fce67b068679d66027dfc67d34a.bindPopup(popup_af55f2d086062ec30dd0a0cd4d3ea98f)
+        ;
+
+        
+    
+    
+            marker_a1f02fce67b068679d66027dfc67d34a.bindTooltip(
+                `<div>
+                     Saint-Brieuc
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f30c2c54e2052bcf45158cb99620266d = L.marker(
+                [47.99444444, -4.102777778],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_3cc7a0a54d63122d6313681c6275cd75);
+        
+    
+            var icon_138b12b10746bd82d0679a843342e3ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f30c2c54e2052bcf45158cb99620266d.setIcon(icon_138b12b10746bd82d0679a843342e3ab);
+        
+    
+        var popup_eaa1f9b33638071faa1506f21ff8b1ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1fdb585c439805d8749b43a187436ee = $(`<div id="html_d1fdb585c439805d8749b43a187436ee" style="width: 100.0%; height: 100.0%;">Quimper Finistère (29)</div>`)[0];
+                popup_eaa1f9b33638071faa1506f21ff8b1ff.setContent(html_d1fdb585c439805d8749b43a187436ee);
+            
+        
+
+        marker_f30c2c54e2052bcf45158cb99620266d.bindPopup(popup_eaa1f9b33638071faa1506f21ff8b1ff)
+        ;
+
+        
+    
+    
+            marker_f30c2c54e2052bcf45158cb99620266d.bindTooltip(
+                `<div>
+                     Quimper
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_311270a78b17bf05fcd43ac45ec905ae = L.marker(
+                [48.11361111, -1.674444444],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_3cc7a0a54d63122d6313681c6275cd75);
+        
+    
+            var icon_0a8149f9ba43b51ba72432c80d89be76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_311270a78b17bf05fcd43ac45ec905ae.setIcon(icon_0a8149f9ba43b51ba72432c80d89be76);
+        
+    
+        var popup_2cf5636c103b1b1049b3b7e6e19fdefa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f913dd607fedf794e794da93cdaaad9 = $(`<div id="html_8f913dd607fedf794e794da93cdaaad9" style="width: 100.0%; height: 100.0%;">Rennes Ille-et-Vilaine (35)</div>`)[0];
+                popup_2cf5636c103b1b1049b3b7e6e19fdefa.setContent(html_8f913dd607fedf794e794da93cdaaad9);
+            
+        
+
+        marker_311270a78b17bf05fcd43ac45ec905ae.bindPopup(popup_2cf5636c103b1b1049b3b7e6e19fdefa)
+        ;
+
+        
+    
+    
+            marker_311270a78b17bf05fcd43ac45ec905ae.bindTooltip(
+                `<div>
+                     Rennes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eea299e0c3d1294b9b281a28bd327c9b = L.marker(
+                [47.65805556, -2.753611111],
+                {"tiles": "Stamen Terrain"}
+            ).addTo(map_3cc7a0a54d63122d6313681c6275cd75);
+        
+    
+            var icon_348215a09559a59f5e08a3b4db78517a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eea299e0c3d1294b9b281a28bd327c9b.setIcon(icon_348215a09559a59f5e08a3b4db78517a);
+        
+    
+        var popup_b4df3e0b27a3642db8d9fc6ea2fc52b0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e0415b0f376e9f6b38914fa46168f0f = $(`<div id="html_9e0415b0f376e9f6b38914fa46168f0f" style="width: 100.0%; height: 100.0%;">Vannes Morbihan (56)</div>`)[0];
+                popup_b4df3e0b27a3642db8d9fc6ea2fc52b0.setContent(html_9e0415b0f376e9f6b38914fa46168f0f);
+            
+        
+
+        marker_eea299e0c3d1294b9b281a28bd327c9b.bindPopup(popup_b4df3e0b27a3642db8d9fc6ea2fc52b0)
+        ;
+
+        
+    
+    
+            marker_eea299e0c3d1294b9b281a28bd327c9b.bindTooltip(
+                `<div>
+                     Vannes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

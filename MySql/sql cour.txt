@@ -1,0 +1,10 @@
+ville_nom_reel
+ville_code_postal
+ville_nom
+ville_departement
+ville_nom_simple
+ville_longitude_deg
+ville_latitude_deg
+
+SELECT `ville_nom_reel`,`ville_code_postal`,`ville_departement`,`ville_nom`,`ville_nom_simple`,`ville_longitude_deg`,`ville_latitude_deg` FROM `villes_france_free` WHERE `ville_nom_simple`='lantic'
+SELECT `ville_nom_reel`,`ville_code_postal`,`ville_departement`,`ville_longitude_deg`,`ville_latitude_deg` FROM `villes_france_free` WHERE `ville_nom_simple`='lantic';
