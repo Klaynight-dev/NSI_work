@@ -143,7 +143,7 @@ while repetition==1: #pour que la partie continue temps que l'utilisateur veux c
     for l in solution:
         affichage = affichage + "-"
 
-    print("====>> Bienvenue dans le pendu <<=====")
+    print("\n====>> Bienvenue dans le pendu <<=====")
 
     while tentatives > 0:
         print("\nMot à deviner : ", affichage) #Affiche le mot avec les "_" ou les lettres trouvées
@@ -193,9 +193,8 @@ while repetition==1: #pour que la partie continue temps que l'utilisateur veux c
           break
      
     print("\n    * Fin de la partie *    ")
-    print("") #simple mise en forme
     
     jouer()#affiche si l'utilisateur veux rejouer
 
-print("Merci d'avoir jouer !")
+print("\nMerci d'avoir jouer !")
 print("A bientôt !")
