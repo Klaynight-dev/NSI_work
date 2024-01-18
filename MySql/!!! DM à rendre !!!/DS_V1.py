@@ -17,11 +17,11 @@ def consommation_par_mois(annee):
 
     # Créer une requête SQL pour obtenir la consommation totale par mois, y compris les heures pleines et les heures creuses
     query = f"""
-        SELECT MONTH(`Date de relevé de l'index`) AS mois,
+        SELECT MONTH(`Date de releve de l'index`) AS mois,
                SUM(`Index Heures pleines (kWh)`) AS consommation_hp,
                SUM(`Index Heures creuses (kWh)`) AS consommation_hc
-        FROM `mes_index_elec_14515774209818_22590`
-        WHERE YEAR(`Date de relevé de l'index`) = {annee}
+        FROM `mes_index_elec`
+        WHERE YEAR(`Date de releve de l'index`) = {annee}
         GROUP BY mois
         ORDER BY mois
     """
@@ -31,7 +31,7 @@ def consommation_par_mois(annee):
     
     # Récupérer les résultats
     results = cursor.fetchall()
-    
+    print(results)
     # Fermer la connexion à la base de données
     cursor.close()
     connection.close()
