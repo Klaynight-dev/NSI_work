@@ -1,3 +1,4 @@
+```
 from PIL import Image                                                                                                                           
 from PIL import Image, ImageEnhance                                                                                                             # Importation des librairies Python Imaging Library
 im1 = Image.open("mouette.jpg")                                                                                                                 # Ouverture de l'image de codage
@@ -33,3 +34,4 @@ for x in range(0,largeur,1):                                                    
                                                                                                                                                 # 
 im1.show()                                                                                                                                      # 
 im1.save("mouette+secret.png") 
+```
